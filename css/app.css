@@ -391,6 +391,10 @@ my-name {
   -webkit-text-stroke-color: #B6D8D7;
 }
 
+html {
+  overflow-x: hidden !important;
+}
+
 
 /* end contact info */
 
