@@ -1,5 +1,6 @@
 body {
   background: #FFF8E7; /* fallback for old browsers */
+  overflow: hidden;
 }
 
 /*greg*/
