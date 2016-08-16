@@ -67,8 +67,17 @@ $(function() {
 
 // parallax js
 $(document).ready(function() {
-    $(window).stellar();
+    // $(window).stellar();
 
+    $(window).scroll(function(event) {
+
+      var y = $(this).scrollTop();
+
+      if (y =650) {
+        $('.post').addClass('animated slideInUp');
+        console.log('yao')
+      }
+    });
 });
 
 // $(document).ready(

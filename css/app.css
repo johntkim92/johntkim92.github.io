@@ -403,6 +403,15 @@ my-name {
   -webkit-text-stroke-color: #B6D8D7;
 }
 
+/* for animate.css */
+.hidden{
+  opacity: 0;
+}
+
+.visible{
+  opacity:1;
+}
+
 /*html {
   overflow-x: hidden !important;
 }*/
