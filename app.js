@@ -70,12 +70,12 @@ $(document).ready(function() {
     // $(window).stellar();
 
     $(window).scroll(function(event) {
-
       var y = $(this).scrollTop();
-
-      if (y =650) {
+      console.log(y);
+      if (y >= 750) {
         $('.post').addClass('animated slideInUp');
-        console.log('yao')
+        console.log("yao")
+        console.log(y)
       }
     });
 });
