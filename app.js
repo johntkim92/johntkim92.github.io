@@ -69,30 +69,49 @@ $(function() {
 $(document).ready(function() {
     // $(window).stellar();
 
-    $(window).scroll(function(event) {
-      var y = $(this).scrollTop();
-      console.log(y);
-      if (y >= 750) {
-        $('.post').addClass('animated slideInUp');
-        console.log("yao")
-        console.log(y)
+    // $(window).scroll(function(event) {
+    //   var y = $(this).scrollTop();
+    //   console.log(y);
+    //   if (y <= 0 || y<=10) {
+    //     $('.wall1-anim').addClass('visible animated rubberBand');
+    //   } else if(y >= 140 && y <= 150) {
+    //     $('.cont1-h1-anim').addClass('visible animated slideInUp');
+    //     console.log("yao")
+    //     console.log(y)
+    //   } else if (y = 350) {
+    //     $('.cont1-p-anim').addClass('visible animated slideInUp');
+    //   }
+    // });
+    $(function () {
+      var $window = $(window),
+          win_height_padded = $window.height() *1.1,
+          isTouch = Modernizr.touch;
+      if (isTouch) {
+        $('.revealOnScroll').addClass('animated');
       }
-    });
-});
 
-// $(document).ready(
-//
-//   function() {
-//
-//     $("html").niceScroll({
-//         cursorcolor:"rgba(30,30,30,.5)",
-//         zindex:999,
-//         scrollspeed:100,
-//         mousescrollstep:50,
-//         cursorborder:"0px solid #fff",
-//     });
-//
-//
-//   }
-//
-// );
+      $window.on('scroll', revealOnScroll);
+      function revealOnScroll(){
+        var scrolled = $window.scrollTop(), win_height_padded = $window.height() *1.1;
+        $('.revealOnScroll:not(.animated)').each(function () {
+          var $this = $(this), offsetTop = $this.offset().top;
+          if(scrolled + win_height_padded > offsetTop) {
+            if ($this.data('timeout')) {
+              window.setTimeout(function() {
+                $this.addClass('animated ' + $this.data('animation'));
+              }, parseInt($this.data('timeout'), 10));
+            } else {
+              $this.addClass('animated ' + $this.data('animation'));
+            }
+          }
+      });
+      $('.revealOnScroll.animated').each(function(index) {
+        var $this = $(this), offsetTop = $this.offset().top;
+        if (scrolled + win_height_padded < offsetTop) {
+          $(this).removeClass('animated fadeInUp fadeInDown fadeInLeft fadeInRight zoomInDown slideInUp slideInDown slideInLeft slideInRight bounce bounceInRight bounceInLeft');
+        }
+      });
+    }
+    revealOnScroll();
+  });
+});
