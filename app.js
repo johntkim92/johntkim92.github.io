@@ -67,21 +67,8 @@ $(function() {
 
 // parallax js
 $(document).ready(function() {
-    // $(window).stellar();
+    $(window).stellar();
 
-    // $(window).scroll(function(event) {
-    //   var y = $(this).scrollTop();
-    //   console.log(y);
-    //   if (y <= 0 || y<=10) {
-    //     $('.wall1-anim').addClass('visible animated rubberBand');
-    //   } else if(y >= 140 && y <= 150) {
-    //     $('.cont1-h1-anim').addClass('visible animated slideInUp');
-    //     console.log("yao")
-    //     console.log(y)
-    //   } else if (y = 350) {
-    //     $('.cont1-p-anim').addClass('visible animated slideInUp');
-    //   }
-    // });
     $(function () {
       var $window = $(window),
           win_height_padded = $window.height() *1.1,
