@@ -67,7 +67,30 @@ $(function() {
 
 // parallax js
 $(document).ready(function() {
+
     $(window).stellar();
+
+    //about picture hovers
+    $( ".about-img" ).hover(
+      function() {
+        var imgId = $( this ).attr('id');
+
+        $(this).closest('div').find('[data-num='+ imgId +']').removeClass('hidden');
+      }, function() {
+        var imgId = $( this ).attr('id');
+        $('[data-num='+ imgId +']').addClass('hidden');
+      }
+    );
+
+    $('.about-img').click(function (event) {
+
+      // write code
+      console.log("yo");
+      event.preventDefault();
+      event.stopPropagation();
+    });
+
+    //window finder - animate
 
     $(function () {
       var $window = $(window),
