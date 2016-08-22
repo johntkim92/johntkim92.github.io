@@ -65,6 +65,7 @@ $(function() {
   });
 });
 
+
 // parallax js
 $(document).ready(function() {
 
@@ -74,10 +75,10 @@ $(document).ready(function() {
     $( ".about-img" ).hover(
       function() {
         var imgId = $( this ).attr('id');
-
-        $(this).closest('div').find('[data-num='+ imgId +']').removeClass('hidden');
+        $(this).closest('div').find('[data-num='+ imgId +']').removeClass('hidden').addClass('animated tada');
       }, function() {
         var imgId = $( this ).attr('id');
+
         $('[data-num='+ imgId +']').addClass('hidden');
       }
     );
