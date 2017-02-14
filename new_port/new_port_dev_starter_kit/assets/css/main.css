@@ -357,8 +357,9 @@ footer {
           color: rgba(0, 0, 0, 0.7); }
 
 h3 {
-  color: #e1c184;
-  text-align: center; }
+  color: #323232;
+  text-align: center;
+  padding: 100px 0 30px; }
 
 .face-lockup {
   max-width: 780px;
@@ -399,6 +400,8 @@ h3 {
     width: 100px;
     background: #e5eaee;
     border-radius: 50%; }
+    .face-lockup [class^="icon-"] path {
+      fill: #323232; }
     .face-lockup [class^="icon-"].icon-headphones {
       order: 1; }
     .face-lockup [class^="icon-"].icon-basketball {
@@ -407,5 +410,27 @@ h3 {
       order: 4; }
     .face-lockup [class^="icon-"].icon-utensils {
       order: 5; }
+
+@media screen and (max-width: 650px) {
+  .face-lockup {
+    display: block;
+    text-align: center; }
+    .face-lockup div {
+      display: inline-block; }
+    .face-lockup .face-img {
+      display: block;
+      background-position: center center;
+      width: auto;
+      background-repeat: no-repeat;
+      margin-bottom: 30px; }
+      .face-lockup .face-img [class^="icon-"] {
+        margin: 10px; } }
+.blurb {
+  max-width: 620px;
+  padding: 0 15px;
+  margin: 50px auto;
+  font-size: 24px;
+  text-align: center;
+  font-weight: 300; }
 
 /*# sourceMappingURL=main.css.map */

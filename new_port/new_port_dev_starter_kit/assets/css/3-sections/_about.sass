@@ -2,6 +2,7 @@ h3
   @extend %small-bold
   color: $accent
   text-align: center
+  padding: 100px 0 30px
 
 .face-lockup
   max-width: 780px
@@ -21,6 +22,9 @@ h3
     background: $bgcolor
     border-radius: 50%
 
+    path
+      fill: $accent
+
     &.icon-headphones
       order: 1
     &.icon-basketball
@@ -29,3 +33,29 @@ h3
       order: 4
     &.icon-utensils
       order: 5
+
+@media screen and (max-width: 650px)
+  .face-lockup
+    display: block
+    text-align: center
+
+    div
+      display: inline-block
+
+    .face-img
+      display: block
+      background-position: center center
+      width: auto
+      background-repeat: no-repeat
+      margin-bottom: 30px
+
+      [class^="icon-"]
+        margin: 10px
+
+.blurb
+  max-width: 620px
+  padding: 0 15px
+  margin: 50px auto
+  font-size: 24px
+  text-align: center
+  font-weight: 300
