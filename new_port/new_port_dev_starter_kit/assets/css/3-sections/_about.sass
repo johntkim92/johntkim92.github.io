@@ -1,0 +1,31 @@
+h3
+  @extend %small-bold
+  color: $accent
+  text-align: center
+
+.face-lockup
+  max-width: 780px
+  +display(flex)
+  margin: 0 auto
+  +align-items(center)
+  +justify-content(space-around)
+
+  .face-img
+    +size(200px)
+    border-radius: 50%
+    background: url(/assets/img/hero-bg.jpg)
+    order: 3
+
+  [class^="icon-"]
+    +size(100px)
+    background: $bgcolor
+    border-radius: 50%
+
+    &.icon-headphones
+      order: 1
+    &.icon-basketball
+      order: 2
+    &.icon-keyboard
+      order: 4
+    &.icon-utensils
+      order: 5
