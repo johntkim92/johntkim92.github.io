@@ -14,6 +14,7 @@ h3
   .face-img
     +size(200px)
     border-radius: 50%
+    background-size: cover
     background: url(../img/me.jpg)
     order: 3
 
@@ -80,7 +81,7 @@ h3
       display: inline-block
       +size(14px)
       background-color: $accent
-      margin-right: 2px
+      margin-right: 8px
       border-radius: 50%
 
       &:after
@@ -91,9 +92,14 @@ h3
         border-radius: 50%
         margin: 2px
 
-    &.skill-8 span:nth-child(n+9)
-      background: $bgcolor
-
     @for $i from 1 through 10
-      &.skill-#{$i} span:nth-child(n+#{i})
-        background: $bgcolor
+      &.skill-#{$i} span:nth-child(n+#{$i + 1})
+        @extend %skill-color
+
+@media screen and (max-width: 541px)
+  .skill-lockup
+    width: 270px
+
+
+%skill-color
+  background: $bgcolor
