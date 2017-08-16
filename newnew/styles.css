@@ -132,17 +132,18 @@ h3 {
 }
 
 .intro h1 {
- font-size: 6em;
+ font-size: 5em;
  text-align: center;
  color: #fff;
  text-transform: uppercase;
  letter-spacing: 0.1em;
  font-weight: 800;
- line-height:1.5em;
+ line-height:1em;
+ padding-bottom: 10px;
 }
 
 .intro h2 {
- font-size: 2em;
+ font-size: 1em;
  text-align:center;
  color:#fff;
  font-weight:300;
